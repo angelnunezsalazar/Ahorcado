@@ -1,0 +1,12 @@
+Feature: Jugar con Palabra
+	Scenario:
+		Given Im playing with "GATITO"
+		And I fill "palabra" with "gatito"
+		And I press "Ok"
+		Then I should see "Usted GANO!" 
+		
+	Scenario:
+		Given Im playing with "GATITO"
+		And I fill "palabra" with "GATITO"
+		And I press "Ok"
+		Then I should see "Usted GANO!" 

@@ -1,0 +1,25 @@
+<h2>La palabra secreta es:</h2>
+
+<%=@word_displayed %>
+<br/><br/>
+<div>
+	Intentar letra
+	<form action="/jugar" method="GET">
+		<input type="text" name="letra" />
+		<input type="submit" value="OK" />
+	</form>
+</div>
+
+<div>
+	Intentar palabra
+	<form action="/jugar" method="GET">
+		<input type="text" name="palabra" />
+		<input type="submit" value="OK" />
+	</form>
+</div>
+
+<div>
+	<h3>Estadisticas</h3>
+	<p> # Errores Letras: <%=@qty_failed_chars %>/6</p>
+	<p> Erroneas: <%=@formatted_failed_chars %></p>
+</div>
